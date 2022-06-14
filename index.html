@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Todo List</title>
+	<link rel="stylesheet" href="style.css" />
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com"> 
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">	
+	<!-- End of Fonts -->
+</head>
+<body>
+	<!-- App Wrapper -->
+	<main class="app">
+		<!-- Greeting -->
+		<section class="greeting">
+			<h2 class="title">
+				Welcome to your Todo List
+			</h2>
+		</section>
+		<!-- End of Greeting -->
+		
+		<!-- New Todo -->
+		<section class="create-todo">
+			<h3>CREATE A TODO</h3>
+			<form id="new-todo-form"></form>
+				<h4>What's on your todo?</h4>
+				<input 
+				    data-new-task-content
+					type="text" 
+					placeholder="e.g. Buy eggs"
+					name="task-content"
+					id="task-content"/>
+                <h4>What is the deadline?</h4>
+                <input 
+				    data-new-task-deadline
+                    type="text" 
+                    placeholder="e.g. 05/30/2022"
+                    name="task-deadline"
+                    id="task-deadline" 
+					/>
+                <button data-submit>Add Todo</button>
+			</form>
+		</section>
+		<!-- End of New Todo -->
+
+		<!-- Todo List -->
+		<section class="todo-list">
+			<h3>Filter Options</h3>
+			<button data-filter-deadline-ascending , class = "btn btn-filter-ascending">Filter Deadline Ascending</button>
+			<button data-filter-deadline-descending , class = "btn btn-filter-descending">Filter Deadline Descending</button>
+			<button data-filter-name , class = "btn btn-filter-name">Filter Tasks by Name</button>
+			<button data-filter-toggle , class = "btn btn-filter-toggle" value = false>Hide Completed Tasks</button>
+			<h4>Toggle Visibility By Day</h4>
+			<input data-filter-tasks-day
+			 type = "text"
+			 placeholder = "e.g. 05/20/2022" class = "input-filter-by-day">
+			 <button data-filter-tasks-day-apply , class = "btn btn-filter-tasks-day-apply">Apply</button>
+			 <button data-filter-tasks-day-reset , class = "btn btn-filter-tasks-day-reset">Reset</button>
+			<h3>TODO LIST</h3>
+			<ul data-task-list></ul>
+
+		</section>
+		<!-- End of Todo List -->
+
+	</main>
+	
+
+	<!-- JS Import -->
+	<script src = "main.js" defer></script>
+	<!-- End of JS Import -->
+</body>
+</html>
